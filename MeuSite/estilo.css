@@ -1,0 +1,239 @@
+/*
+* 
+* @author Édio Melo
+* @version 0.2
+*/
+
+/* ========================= layout ======================== */
+html, body, .capa {
+	height: 100%;
+}
+
+body {
+	background: url('imagens/background-transparente.png') no-repeat,
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#3494e6, #ec6ead);
+	background-size: 100%;				
+	background-attachment: fixed;			
+}
+
+/*  -- Barra de Navegação -- */
+.img-logo {
+	height: 40px;
+	width: 40px;
+	display: block;
+	background: url('imagens/favicon-2.png') no-repeat;
+	background-size: contain;
+	color: transparent;
+}
+
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.6);
+	border: none;
+}
+
+.navbar-brand {
+	padding: 5px;
+}
+
+.divisor {
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover, #rodape .nav a:hover {
+	color: #9bf0e1;
+	background: none;
+}
+
+/* -- Imagem de capa -- */
+.capa {
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* ------------------------------------------------ Configurar o SlideShow ------------------------------------------------ */
+.slider {
+	width: 100%;
+	position: relative;
+}
+
+button.slick-prev {
+    font-size: 0px; /* Tira o tamanho do botão para sumir */
+    border: none; /* Tira as bordas do botao */
+    height: 51px; /* Define a altura do botão */
+    width: 25px; /* Define a largura do botão */
+    background-color: transparent; /* Deixa a cor de fundo do botão transparente */
+    position: absolute; /* Em situações como essa, o botão precisa ficar em cima de outros elementos , então a posição precisa ser absoluta para isso poder ser feito */
+    top: 41%; /* Define uma distancia do topo de 41% */
+    left: 22%; /* Define uma distancia do canto esquerdo de 27% */
+}
+/* Estiliza o botão next */
+button.slick-next {
+    font-size: 0px; /* Tira o tamanho do botão para sumir */
+    border: none; /* Tira as bordas do botao */
+    height: 51px; /* Define a altura do botão */
+    width: 25px; /* Define a largura do botão */
+    background-color: transparent; /* Deixa a cor de fundo do botão transparente */
+    position: absolute; /* Em situações como essa, o botão precisa ficar em cima de outros elementos , então a posição precisa ser absoluta para isso poder ser feito */
+    bottom: 54%; /* Define uma distancia do canto inferior */
+    left: 76%; /* Define uma dsitancia do canto esquerdo */
+}
+/* Estiliza a classe dos botões, mais para isso precisa dizer que quero a 'ul' do slick-dots e quero todas as 'li' type 'button' */
+.slick-dots li button {
+    font-size: 0px; /* Definindo o tamanho da fonte como 0 */
+    border: 3px solid #d4cfcf52; /* Deixando uma borda 3px */
+    border-radius: 50%; /* Colocando a borda como radius ou seja redonda em 50% */
+    width: 20px; /* Definir altura em 20px */
+    height: 20px; /* Definir largura em 20px */ 
+    background: transparent; /* Dessa forma deixando o background transparante so fica a cor da borda */
+    cursor: pointer; /* Define o cursor como pointer para todos os li button */
+}
+/* Estilizar diretamente as 'li' */
+.slick-dots li {
+    display: inline-block; /* Não estava conseguindo alinhar eles lado a lado porque eu estava pegando as 'li' 'button', e é apenas as li
+    que eu tinha que estlizar */
+	padding-left: 8px; /* Define um espaçamento entre as li de 8px */ 
+}
+/* Estilizar os slicks-dots em si, ou seja , os elementos que mostram quantos slides tem e em qual ele esta */
+.slick-dots {
+    margin: 0 auto; /* Tira a margem e deixa ela auto */
+    width: 100%; /* Define um tamanho para a div slick-dots */
+    list-style: none; /* Tira os efeitos de bolinha, que vem nas listas quando a gente cria elas */
+    position: relative; /* Deixa a posição absoluta, ou seja ignora a posição dos outros objetios, ou seja ele nao segue padrões de nenhuma div pai */
+	padding: 1px;
+	text-align-last: center;
+ 
+}
+/* Aqui, especificamente vai ser Estilizado o botão 'active' ou seja o botão em que o slick-slide esta, para identificar em qual slide
+ele se encontra, ele vai receber caracteristicas especiais, então deve-se pegar as 'li' em que esteja com a classe slick-active e vai selecionar
+o botão em que ela está para editar */
+li.slick-active button{
+    background-color: #e20404; /* Deixa o background do slick-dot ativo vermelho */
+    border: 2px solid #e20404; /* Cor da borda do slick-dot ativo */
+    border-radius: 50%; /* Define a borda como arredondada e o tamanho dela */
+}
+
+.slick-initialized {
+	overflow: hidden;
+}
+
+/* ------------------------------------------------ Fim Slide Show ------------------------------------------------ */
+
+/* -- Imagem do Bichinho -- */
+.bicho {
+	width: 100%;
+	position: relative;
+	left: 30%;
+}
+
+.container {
+	overflow: hidden;
+}
+
+/* -- Seção Conteúdo -- */
+#conteudo {
+	background-color: white;
+}
+
+/* -- Rodapé -- */
+footer {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 50px 0px 20px 0px;
+	overflow: hidden;
+}
+
+.item-rede-social {
+	float: right;
+}
+
+/* ========================= Tipografia ======================== */
+	/* Media queries */
+
+	/*  exs  */
+	@media screen and (max-width: 420px) {
+	body {
+	background: url('imagens/extra-small-background.png') no-repeat,
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#3494e6, #ec6ead);
+	background-size: 100%;				
+	background-attachment: fixed;	
+	}		
+	}
+	
+	/* sm */
+	@media screen and (min-width: 421px) {
+	body {
+	background: url('imagens/small-background-teste.png') no-repeat,
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#3494e6, #ec6ead);
+	background-size: 100%;				
+	background-attachment: fixed;
+	}
+}
+
+	/* md */
+	@media screen and (min-width: 992px) {
+
+	}
+
+	/* lg */
+	@media screen and (min-width: 1200px) {
+		body {
+	background: url('imagens/background-transparente.png') no-repeat,
+				url('imagens/ruido.png'),
+				linear-gradient(50deg,#3494e6, #ec6ead);
+	background-size: 100%;				
+	background-attachment: fixed;			
+}
+
+	}
+	/* Fim Media queries */
+
+/* O Comando font-face serve para colocar uma fonte externa dentro do seu site html */
+@font-face {
+    font-family: BadUni; /* Nome da fonte que eu determinei */
+    src: url("fonts/Bad\ Unicorn\ DEMO.ttf"); /* Local onde se encontra o arquivo da fonte */
+}
+
+#barra-navegacao>ul>li>a {
+	font-family: BadUni;
+	font-size: 30px;
+}
+
+.texto-capa>h1 {
+	font-family: BadUni;
+	font-size: 40px;
+	color: white;
+}
+
+.texto-capa>h3 {
+	font-family: BadUni;
+	font-size: 30px;
+	color: white;
+}
+
+#rodape h4 {
+	font-family: BadUni;
+	font-size: 30px;
+	color: white;
+	text-transform: uppercase;
+}
+
+#rodape a {
+	color: #919496;
+}
