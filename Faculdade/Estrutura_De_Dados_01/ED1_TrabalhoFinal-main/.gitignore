@@ -1,9 +1,0 @@
-bin/*
-out/*
-.idea/*
-*.iml
-.classpath
-.project
-relatorio_filacomum.csv
-relatorio_filaprioritaria.csv
-/bin/
